@@ -25,7 +25,7 @@ namespace AuthApp
             {
                 if (IsUserRegistered())
                 {
-                    MessageBox.Show($"Успешный вход: {username}");
+                    MessageBox.Show($"Успешный вход: {person.username}");
                 }
                 else
                 {
@@ -37,42 +37,28 @@ namespace AuthApp
         // регистрация
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = LoginTextBox.Text;
-            string password = PasswordBox.Password;
+            User person = new User();
+            person.username = LoginTextBox.Text;
+            person.password = PasswordBox.Password;
 
-            if (username == "" || password == "")
+            if (person.username == "" || person.password == "")
             {
                 MessageBox.Show("Ошибка! Введите корректные данные.");
             }
-            else if (IsUserRegistered(username, password))
+            else if (IsUserRegistered())
             {
                 MessageBox.Show("Пользователь уже зарегистрирован");
             }
             else
             {
-                SaveUser(username, password);
-                MessageBox.Show($"Регистрация прошла успешно: {username}");
+                SaveUser(person.username, person.password);
+                MessageBox.Show($"Регистрация прошла успешно: {person.username}");
             }
         }
 
-        // проверяем, есть ли пользователь в базе
-        private bool IsUserRegistered(string username, string password)
-        {
-            if (File.Exists("users.txt"))
-            {
-                string[] readFile = File.ReadAllLines("users.txt");
-                for (int i = 0; i < readFile.Length; i++)
-                {
-                    string[] data = readFile[i].Split(';');
-                    if (data.Length == 2 && data[0] == username && data[1] == password)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
-
+        // проверяем, есть ли пользователь в базе теперь это в классе
+        
+        
         private void SaveUser(string username, string password)
         {
             string info = username + ";" + password + "\n";
