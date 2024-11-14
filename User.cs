@@ -1,7 +1,9 @@
 using System.IO;
 using System.Windows;
 
-class User {
+namespace AuthApp
+{
+    class User {
     public string username = "";
     public string password = "";
 
@@ -21,4 +23,5 @@ class User {
             }
             return false;
         } 
+}
 }

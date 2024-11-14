@@ -23,7 +23,7 @@ namespace AuthApp
             }
             else
             {
-                if (IsUserRegistered())
+                if (person.IsUserRegistered())
                 {
                     MessageBox.Show($"Успешный вход: {person.username}");
                 }
@@ -45,7 +45,7 @@ namespace AuthApp
             {
                 MessageBox.Show("Ошибка! Введите корректные данные.");
             }
-            else if (IsUserRegistered())
+            else if (person.IsUserRegistered())
             {
                 MessageBox.Show("Пользователь уже зарегистрирован");
             }
@@ -56,9 +56,9 @@ namespace AuthApp
             }
         }
 
-        // проверяем, есть ли пользователь в базе теперь это в классе
+        // проверяем, есть ли пользователь в базе, теперь это в классе
         
-        
+        // сохраняем пользователя
         private void SaveUser(string username, string password)
         {
             string info = username + ";" + password + "\n";

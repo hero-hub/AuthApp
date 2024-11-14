@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WORK\\Test_program\\AuthApp\\AuthApp.csproj",
+      "projectUniqueName": "D:\\WORK\\test_program\\AuthApp\\AuthApp.csproj",
       "projectName": "AuthApp",
-      "projectPath": "D:\\WORK\\Test_program\\AuthApp\\AuthApp.csproj",
+      "projectPath": "D:\\WORK\\test_program\\AuthApp\\AuthApp.csproj",
       "packagesPath": "C:\\Users\\gigen\\.nuget\\packages\\",
-      "outputPath": "D:\\WORK\\Test_program\\AuthApp\\obj\\",
+      "outputPath": "D:\\WORK\\test_program\\AuthApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gigen\\AppData\\Roaming\\NuGet\\NuGet.Config"
