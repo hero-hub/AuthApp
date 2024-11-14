@@ -17,3 +17,4 @@ D:\WORK\Test_program\AuthApp\obj\Debug\net8.0-windows\refint\AuthApp.dll
 D:\WORK\Test_program\AuthApp\obj\Debug\net8.0-windows\AuthApp.pdb
 D:\WORK\Test_program\AuthApp\obj\Debug\net8.0-windows\AuthApp.genruntimeconfig.cache
 D:\WORK\Test_program\AuthApp\obj\Debug\net8.0-windows\ref\AuthApp.dll
+D:\WORK\test_program\AuthApp\obj\Debug\net8.0-windows\AuthApp.sourcelink.json

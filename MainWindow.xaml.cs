@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Windows;
 
-namespace MyAuthApp
+namespace AuthApp
 {
     public partial class MainWindow : Window
     {
@@ -13,16 +13,17 @@ namespace MyAuthApp
         // авторизация
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = LoginTextBox.Text;
-            string password = PasswordBox.Password;
+            User person = new User();
+            person.username = LoginTextBox.Text;
+            person.password = PasswordBox.Password;
 
-            if (username == "" || password == "")
+            if (person.username == "" || person.password == "")
             {
                 MessageBox.Show("Ошибка! Введите корректные данные.");
             }
             else
             {
-                if (IsUserRegistered(username, password))
+                if (IsUserRegistered())
                 {
                     MessageBox.Show($"Успешный вход: {username}");
                 }
