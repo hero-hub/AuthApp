@@ -4,10 +4,11 @@ using System.Windows;
 namespace AuthApp
 {
     class User {
-    public string username = "";
-    public string password = "";
+        public string username = "";
+        public string password = "";
+        public string mail = "";
 
-    public bool IsUserRegistered()
+        public bool IsUserRegistered()
         {
             if (File.Exists("users.txt"))
             {
@@ -15,7 +16,7 @@ namespace AuthApp
                 for (int i = 0; i < readFile.Length; i++)
                 {
                     string[] data = readFile[i].Split(';');
-                    if (data.Length == 2 && data[0] == username && data[1] == password)
+                    if (data.Length == 3 && data[0] == username && data[1] == password && data[2] == mail)
                     {
                         return true;
                     }
@@ -23,5 +24,5 @@ namespace AuthApp
             }
             return false;
         } 
-}
+    }
 }
